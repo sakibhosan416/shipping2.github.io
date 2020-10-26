@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Le's Bookstore</title>
+
+	<!--favicon-->
+    <link rel="shortcut icon" href="image/favecon.png" />	
+        
+    <!--font-awesome css-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    
+    <!--main css-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/animate.css" rel="stylesheet" type="text/css" />	
+    <link href="css/responsive.css" rel="stylesheet" type="text/css" />	
+     <!-- Font awesome -->
+	<script src="https://kit.fontawesome.com/6ff322857f.js" crossorigin="anonymous"></script>
+
+    <!-- data table -->
+	<link th:href="@{/css/jquery.dataTables.min.css}" rel="stylesheet" />
+	<link th:href="@{/css/dataTables.bootstrap.min.css}" rel="stylesheet" />
+	<script src="https://js.stripe.com/v2/"></script>
+	<script src="https://js.stripe.com/v3/"></script>
+	<link th:href="@{css/font-awesome.min.css}" rel="stylesheet" />
+      
+    <!--google font-->
+  	<link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+
+
+    <!--responsiv menu-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui, user-scalable=no">
+    <link href="stylesheets/reset.css" rel="stylesheet" type="text/css">
+    <link href="stylesheets/ma5-mobile-menu.css" rel="stylesheet" type="text/css">
+    <link href="stylesheets/site.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+
+<!-- *******navbar-part-start****** -->
+<section id="menu">
+	<nav class="navbar navbar-inverse">
+	  <div class="container">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#"><img src="image/logo3.png"></a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="myNavbar">
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="#">Voir les annonces</a></li>
+		        <li><a href="#">Passer une annonce</a></li>
+		        <li><a href="#">Mon compte</a></li>
+		        <li><a href="#">Connexion</a></li>
+		        <li><a href="#">Déconnexion</a></li>
+		      </ul>
+		    </div>
+	  </div><!-- end container -->
+	</nav>
+</section>	
+<!-- *******navbar-part-end****** -->
+
+
+<!-- *******country-part-start****** -->
+<section id="country">
+	<h1>Les départs disponibles</h1>
+</section>
+<!-- *******country-part-start****** -->
+
+<!-- *******select-country-part-start****** -->
+<section id="select-country">
+	<div class="container">
+		<div class="select-country">
+			<h2>Sélectionnez le pays</h2>
+
+			<div class="country-nav">
+     			<ul>
+     				<li class="mixitup-control-active" data-filter="all">Toutes destinations</li>
+     				<li data-filter=".départ">Pays de départ</li>
+     				<li data-filter=".arrivée">Pays d'arrivée</li>
+     			</ul>
+     		</div>	
+     		<div class="row gallery">
+     			<div class="mix départ col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Algérie</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->
+
+     			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Allemagne</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->
+
+     			<div class="mix web-des col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Angleterre</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->
+
+     			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Bangladesh</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->     
+
+ 
+
+     			<div class="mix départ col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Belgique</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->     
+     			<div class="mix départ col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Burkina-Faso</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->     
+
+
+     			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Cambodge</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->     
+     			<div class="mix départ col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Cameroun</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->     
+     			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Centrafrique</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->     
+     			<div class="mix départ col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Comores</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->     
+
+     			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Côte d'Ivoire</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->  
+
+     			<div class="mix départ col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Ethiopie</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->      			        			     			     			     			     			     			     			     						
+     			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Gabon</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 --> 
+
+     			<div class="mix départ col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">France</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 --> 
+
+     			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Gambie</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 --> 
+
+     			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Ghana</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 --> 
+
+     			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Guadeloupe</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->    
+
+    			<div class="mix départ col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Guyane</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 --> 
+
+    			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Guinée</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 --> 
+
+    			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Haiti</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 --> 
+
+    			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Hollande</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 --> 
+
+    			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Inde</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 --> 
+
+    			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Israel</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 --> 
+
+    			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Italie</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 --> 
+
+    			<div class="mix départ col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Laos</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->
+    			<div class="mix départ col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Liban</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->
+    			<div class="mix départ col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Madagascar</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->
+    			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Malaisie</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->
+    			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Mali</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->
+    			<div class="mix départ col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Martinique</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->
+    			<div class="mix départ col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Mauritanie</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->
+
+    			<div class="mix départ col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Maroc</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->
+    			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Mayotte</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->   
+
+    			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Niger</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->  
+
+    			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Nigeria</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->  
+
+    			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">République
+						Démocratique du Congo</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->  
+
+    			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Rwanda</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->  
+
+    			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Sénégal</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->  
+
+    			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Soudan</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->  
+
+    			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Suisse</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->  
+
+    			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Sri Lanka</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->  
+    			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Tanzanie</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->  
+
+    			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Tchad</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->  
+
+    			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Thailande</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->  
+
+    			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Togo</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->  
+
+    			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Tunisie</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->  
+
+    			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Turquie</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->  
+
+    			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Pakistan</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 --> 
+
+    			<div class="mix arrivée col-md-4  p-1">
+     				<div class="each-items">
+     					<div class="each-items-left">
+	     					<div class="time">
+	     						<p>08.30</p>
+	     					</div>
+	     					<div class="each-country">
+	     						<a href="">Viêt Nam</a>
+	     					</div>
+	     					<div class="each-icone">
+	     						<ul>
+	     							<li><i class="fas fa-shopping-basket"></i></li>
+	     							<li><i class="fas fa-ship"></i></li>
+	     							<li><i class="fas fa-check"></i></li>
+	     						</ul>
+	     					</div>
+     					</div>
+     					<div class="each-items-right">
+	     					<div class="money">
+	     						<p>25,75 €</p>
+	     					</div>
+     					</div>
+     				</div><!-- end each-items -->
+     			</div> <!-- end col-md-4 -->      			      			     			     			     			     			     			     			     			     			     			     			     			     			     			     			  			     			     			     			     			     			     			     			     			     			     	     			     			     			     			     			  			     			     			     			
+
+     			   			
+     			     			     			     			
+     		</div><!-- end row -->
+
+
+
+
+
+
+     		</div><!-- end select-country -->
+
+		</div><!-- end select-country -->
+
+	</div><!-- end container -->
+</section>
+<!-- *******select-country-part-end****** -->
+
+
+<!-- *******footer-part-end****** -->
+<section id="footer">
+	<div class="container">
+		<div class="footer">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="footer-left">
+						<a href=""><img src="image/logo3.png"></a>
+						<a href="https://github.com/twbs/bootstrap" target="_blank">Conditions Générales d'Utilisation (CGU)</a>
+						<a href="https://twitter.com/getbootstrap" target="_blank">Foire Aux Questions (FAQ)</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="footer-center">
+						<li><a href="tel:+880248956492"><i class="fas fa-phone-alt"></i>+88 02 48956492</a></li>
+						<li><a href="#"><i class="fas fa-envelope"></i>E-mail : hello@coshipping.fr</a></li>
+						<a href="https://twitter.com/mdo" target="_blank"><i class="fab fa-twitter-square"></i></a>
+						<a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="footer-right">
+						<p>coshipping est le N° 1 de la plateforme collaborative de livraison de colis par particuliers par voie maritime. Nous sommes présents sur facebook 	 <a href="https://twitter.com/mdo" rel="noopener" target="_blank">@mdo</a> et sur twitter <a href="https://twitter.com/fat" rel="noopener" target="_blank">@fat</a>. Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
+					</div>
+				</div>
+			</div><!-- end row -->
+			<div class="footer-bootom">
+				<p>© 2020 - Tous droits réservés</p>
+				<p><a href="https://www.fiverr.com/sakibhosan?up_rollout=true" target="_blank"><i class="fa fa-code pad" aria-hidden="true"></i>Made with by <span>"Sakib Hosan"</span></a></p>
+			</div>
+		</div>
+	</div><!-- end container -->
+</section>
+<!-- *******footer-part-end****** -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--bootstrap-->
+    <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="js/script.js"></script>
+    <!-- mixitup pluging -->
+	<script src="js/mixitup.min.js"></script>
+    <script type="text/javascript">
+    	var mixer = mixitup('.gallery');
+
+    </script>
+
+
+     <!-- Bootstrap core JavaScript
+	  ================================================== -->
+	  <!-- Placed at the end of the document so the pages load faster -->
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+	  <script src="../../dist/js/bootstrap.min.js"></script>
+	  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	  <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </div>
+	  <div th:fragment="body-bottom-scripts">
+		  <!--/.container-fluid 	<script th:src="@{/js/jquery.min.js}"></script>
+		  <script th:src="@{/js/bootstrap.min.js}"></script>
+  -->
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>  
+		  <script th:src="@{/js/scripts.js}"></script>
+		  <!-- data table -->
+		  <script th:src="@{/js/jquery.dataTables.min.js}"></script>
+		  <script th:src="@{/js/dataTables.bootstrap.min.js}"></script>
+		  
+	  </div>
+
+   
+</body>
+</html>

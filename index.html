@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Le's Bookstore</title>
+
+	<!--favicon-->
+    <link rel="shortcut icon" href="image/favecon.png" />	
+        
+    <!--font-awesome css-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    
+    <!--main css-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/animate.css" rel="stylesheet" type="text/css" />	
+    <link href="css/responsive.css" rel="stylesheet" type="text/css" />	
+     <!-- Font awesome -->
+	<script src="https://kit.fontawesome.com/6ff322857f.js" crossorigin="anonymous"></script>
+
+    <!-- data table -->
+	<link th:href="@{/css/jquery.dataTables.min.css}" rel="stylesheet" />
+	<link th:href="@{/css/dataTables.bootstrap.min.css}" rel="stylesheet" />
+	<script src="https://js.stripe.com/v2/"></script>
+	<script src="https://js.stripe.com/v3/"></script>
+	<link th:href="@{css/font-awesome.min.css}" rel="stylesheet" />
+      
+    <!--google font-->
+  	<link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+
+
+    <!--responsiv menu-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui, user-scalable=no">
+    <link href="stylesheets/reset.css" rel="stylesheet" type="text/css">
+    <link href="stylesheets/ma5-mobile-menu.css" rel="stylesheet" type="text/css">
+    <link href="stylesheets/site.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+
+<!-- *******navbar-part-start****** -->
+<section id="menu">
+	<nav class="navbar navbar-inverse">
+	  <div class="container">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#"><img src="image/logo3.png"></a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="myNavbar">
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="#">Voir les annonces</a></li>
+		        <li><a href="bookshelf.html">Passer une annonce</a></li>
+		        <li><a href="#">Mon compte</a></li>
+		        <li><a href="#">Connexion</a></li>
+		        <li><a href="#">Déconnexion</a></li>
+		      </ul>
+		    </div>
+	  </div><!-- end container -->
+	</nav>
+</section>	
+<!-- *******navbar-part-end****** -->
+
+
+
+<!-- *******slider-part-start****** -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="image/2.jpg" alt="Los Angeles">
+    </div>
+
+    <div class="item">
+      <img src="image/cargo1.jpg" alt="Chicago">
+    </div>
+
+    <div class="item">
+      <img src="image/conteneur.jpeg" alt="New York">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>     
+<!-- *******slider-part-end****** -->
+
+<!-- ******* Marketing messaging and featurettes-part-start****** -->
+<section id="marketing">
+<div class="container">
+	<div class="row">
+
+	<div class="col-md-4">
+		    <div class="box wow zoomIn" data-wow-delay=".3s"">
+		     	<a href="#"><img src="image/img20.jpg" class="img-fluid img-thumbnail"></a>
+			    <p class="m-4">
+			    <h5>Vous voulez envoyer un colis dans votre pays d'origine ou à l'étranger à moindre coût?</h5>
+			    <p>Réaliser de grandes économies sur vos frais d'envoi de colis. Repondez simplement à une annonce de particulier, de transporteur ou de transitaire.
+			    </p>
+			    <div class="btn">
+			    	<a href="#">Déposez une annonce »</a>
+			    </div>
+		    </div>
+		</div>	
+		
+		<div class="col-md-4">
+		    <div class="box wow zoomIn" data-wow-delay=".3s"">
+		     	<a href="#"><img src="image/img57.jpg" class="img-fluid img-thumbnail"></a>
+			    <p class="m-4">
+			    <h5>Vous êtes un particulier, une association et vous voulez faire partir un conteneur à l'international?</h5>
+			    <p>Vous avez la possibilité de gagner de l'argent et de vous faire rembourser une partie de vos frais de transport en optimisant les espaces libres de votre conteneur.
+			    </p>
+			    <div class="btn">
+			    	<a href="#">Regarder les annonces »</a>
+			    </div>
+		    </div>
+		</div>		
+
+		
+		<div class="col-md-4">
+		    <div class="box wow zoomIn" data-wow-delay=".3s"">
+		     	<a href="#"><img src="image/img3.jpg" class="img-fluid img-thumbnail"></a>
+			    <p class="m-4">
+			    <h5>Vous êtes transporteur professionnel? Vous êtes un transitaire? Optimisez rapidement vos groupages maritime.</h5>
+			    <p>Trouvez plus rapidement vos clients ici et optimisez vos conteneurs au plus vite.
+			    </p>
+			    <div class="btn">
+			    	<a href="#">Déposez une annonce »</a>
+			    </div>
+		    </div>
+		</div>		     			     				     		
+	</div><!-- The row -->
+</div>	
+</section>
+<!-- *******Marketing messaging and featurettes-part-end****** -->
+
+<!-- *******about-us-part-start****** -->
+<section id="about-us">
+	<div class="container">
+		<div class="about-us">
+			<h2>Quel est le concept? C'est simple,<br> c'est le principe du groupage maritime</h2>
+			<p>Comme toute plateforme, nous mettons en relation des personnes qui transportent des marchandises et qui souhaitent rembourser une partie des frais de transport maritime en optimisant les espaces perdus du conteneur et les personnes qui veulent expédier quelques colis à leurs proches à l'étranger. C'est simple, pratique et économique, puisque vous payez uniquement au prorata du volume que vous expédiez.</p>
+		</div>
+	</div><!-- end container -->
+</section>
+<!-- *******about-us-end****** -->
+
+<!-- *******work-part-start****** -->
+<section id="work">
+	<div class="container">
+		<h2>Livraisons de colis à l'étranger entre <br>particuliers Comment çà marche?</h2>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="work">
+					<p>Etape 1) Vous disposez d'un conteneur 20 pieds, 40 pieds? Gagnez de l'argent en déposant une annonce <a href="#" >ici</a></p>
+					<ul>
+						<li><i class="fas fa-arrow-circle-right"></i>Précisez votre port de destination</li>
+						<li><i class="fas fa-arrow-circle-right"></i>Détaillez bien votre annonce</li>
+						<li><i class="fas fa-arrow-circle-right"></i>Précisez votre port de destination</li>
+						<li><i class="fas fa-arrow-circle-right"></i>Précisez la quantité d'espace conteneur que voulez vendre</li>
+						<li><i class="fas fa-arrow-circle-right"></i>Donnez la date de départ</li>
+						<li><i class="fas fa-arrow-circle-right"></i>Les conditions de ramassage des colis</li>
+						<li><i class="fas fa-arrow-circle-right"></i>Fixer votre prix.</li>
+					</ul>
+					<p>Etape 2) Les clients vont vous contacter par mail</p>
+					<ul>
+						<li><i class="fas fa-arrow-circle-right"></i>Précisez votre port de destination</li>
+						<li><i class="fas fa-arrow-circle-right"></i>Détaillez bien votre annonce</li>
+						<li><i class="fas fa-arrow-circle-right"></i>Précisez votre port de destination</li>
+						<li><i class="fas fa-arrow-circle-right"></i>Précisez la quantité d'espace conteneur que voulez vendre</li>
+						<li><i class="fas fa-arrow-circle-right"></i>Donnez la date de départ</li>
+						<li><i class="fas fa-arrow-circle-right"></i>Les conditions de ramassage des colis</li>
+						<li><i class="fas fa-arrow-circle-right"></i>Fixer votre prix.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="work-left">
+					<img src="image/img9.jpeg">
+				</div>
+			</div>
+		</div> <!-- end row -->
+	</div> <!-- end container -->
+</section>
+<!-- *******work-part-end****** -->
+
+
+
+<!-- *******private-shipper-part-start****** -->
+<section id="private">
+	<div class="private-left">
+		<h2>Vous êtes expediteur particulier.<br> Que faire? c'est simple.</h2>
+		<ul>
+			<li><i class="fas fa-arrow-circle-right"></i>Précisez votre port de destination</li>
+			<li><i class="fas fa-arrow-circle-right"></i>Détaillez bien votre annonce</li>
+			<li><i class="fas fa-arrow-circle-right"></i>Précisez votre port de destination</li>
+			<li><i class="fas fa-arrow-circle-right"></i>Précisez la quantité d'espace conteneur que voulez vendre</li>
+			<li><i class="fas fa-arrow-circle-right"></i>Donnez la date de départ</li>
+			<li><i class="fas fa-arrow-circle-right"></i>Les conditions de ramassage des colis</li>
+			<li><i class="fas fa-arrow-circle-right"></i>Fixer votre prix.</li>
+		</ul>		
+	</div>
+	<div class="private-right">
+		
+	</div>
+</section>
+<!-- *******private-shipper-part-end****** -->
+
+
+<!-- *******package-part-end****** -->
+<section id="package">
+	<div class="container">
+		<div class="package">
+			<h2>Envoyez ou transportez tout type de colis</h2>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="product-mother">
+						<div class="product">
+							<h3>Canapé</h3>
+							<p>C'est le mobilier central pour mieux recevoir les invités dans le salon. Envoyez le à vos proche à l'étranger</p>
+						</div>
+						<div class="product-left">
+							<img src="image/remove.png">
+						</div>
+					</div>	
+					<div class="product-mother">
+						<div class="product">
+							<h3>Deux roues</h3>
+							<p>Nous avons les solutions pour expédier à l'étranger vos deux roues (moto, velo, scooter...). Regardez les annonces</p>
+						</div>
+						<div class="product-left">
+							<img src="image/moto.jpg">
+						</div>
+					</div>
+
+					<div class="product-mother">	
+						<div class="product">
+							<h3>Pneus</h3>
+							<p>Vous pouvez expédier des pneus neufs et d'occasions à des tarifs réduits</p>
+						</div>
+						<div class="product-left">
+							<img src="image/pneu.jpg">
+						</div>
+					</div>
+					<div class="product-mother">
+						<div class="product">
+							<h3>Vaisselles</h3>
+							<p>Mettez les petits plats dans les grands et expédiez le tout vers l'étanger</p>
+						</div>
+						<div class="product-left">
+							<img src="image/vaisselle.jpeg">
+						</div>
+					</div>			
+				</div><!-- end col-md -6 -->
+
+				<div class="col-md-6">
+					
+					<div class="product-mother">
+						<div class="product">
+							<h3>Cartons</h3>
+							<p>Protégez les affaires à envoyer, mettez-les en cartons puis expédiez-les</p>
+						</div>
+						<div class="product-left">
+							<img src="image/carton.jpg">
+						</div>
+					</div>
+
+					<div class="product-mother">	
+						<div class="product">
+							<h3>Réfrigirateurs</h3>
+							<p>Les meubles aussi c'est possible de les expédier. Trouvez votre transportur sur notre plateforme</p>
+						</div>
+						<div class="product-left">
+							<img src="image/frigidaire.jpg">
+						</div>
+					</div>	
+
+					<div class="product-mother">	
+						<div class="product">
+							<h3>Meubles</h3>
+							<p>Les meubles aussi c'est possible de les expédier. Trouvez votre transportur sur notre plateforme</p>
+						</div>
+						<div class="product-left">
+							<img src="image/meuble.jpg">
+						</div>
+					</div>							
+				</div><!-- end col-md -6 -->
+
+			</div><!-- end row -->
+		</div>
+	</div>	<!-- end container -->
+</section>
+<!-- *******package-part-end****** -->
+
+<!-- *******footer-part-end****** -->
+<section id="footer">
+	<div class="container">
+		<div class="footer">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="footer-left">
+						<a href=""><img src="image/logo3.png"></a>
+						<a href="https://github.com/twbs/bootstrap" target="_blank">Conditions Générales d'Utilisation (CGU)</a>
+						<a href="https://twitter.com/getbootstrap" target="_blank">Foire Aux Questions (FAQ)</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="footer-center">
+						<li><a href="tel:+880248956492"><i class="fas fa-phone-alt"></i>+88 02 48956492</a></li>
+						<li><a href="#"><i class="fas fa-envelope"></i>E-mail : hello@coshipping.fr</a></li>
+						<a href="https://twitter.com/mdo" target="_blank"><i class="fab fa-twitter-square"></i></a>
+						<a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="footer-right">
+						<p>coshipping est le N° 1 de la plateforme collaborative de livraison de colis par particuliers par voie maritime. Nous sommes présents sur facebook 	 <a href="https://twitter.com/mdo" rel="noopener" target="_blank">@mdo</a> et sur twitter <a href="https://twitter.com/fat" rel="noopener" target="_blank">@fat</a>. Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
+					</div>
+				</div>
+			</div><!-- end row -->
+			<div class="footer-bootom">
+				<p>© 2020 - Tous droits réservés</p>
+				<p><a href="https://www.fiverr.com/sakibhosan?up_rollout=true" target="_blank"><i class="fa fa-code pad" aria-hidden="true"></i>Made with by <span>"Sakib Hosan"</span></a></p>
+			</div>
+		</div>
+	</div><!-- end container -->
+</section>
+<!-- *******footer-part-end****** -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--bootstrap-->
+    <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="js/script.js"></script>
+
+
+     <!-- Bootstrap core JavaScript
+	  ================================================== -->
+	  <!-- Placed at the end of the document so the pages load faster -->
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+	  <script src="../../dist/js/bootstrap.min.js"></script>
+	  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	  <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </div>
+	  <div th:fragment="body-bottom-scripts">
+		  <!--/.container-fluid 	<script th:src="@{/js/jquery.min.js}"></script>
+		  <script th:src="@{/js/bootstrap.min.js}"></script>
+  -->
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>  
+		  <script th:src="@{/js/scripts.js}"></script>
+		  <!-- data table -->
+		  <script th:src="@{/js/jquery.dataTables.min.js}"></script>
+		  <script th:src="@{/js/dataTables.bootstrap.min.js}"></script>
+		  
+	  </div>
+
+   
+</body>
+</html>
